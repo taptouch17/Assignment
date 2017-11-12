@@ -232,7 +232,7 @@ void ofApp::getData()
     if(in)//file opened correctly
      {
        in>>length>>change_len>>angle;//no error checking (hope for the best)
-       axiom.enqueue(in);
+       in>>axiom.enqueue(in);
        in>>R; 
        
       for(auto i = 0u; i < R; i++)
