@@ -20,8 +20,27 @@ int ofApp::linearSearch(auto& Data, auto key)
 }
 */
 
+void swap(int *xp, int *yp)
+{
+    int temp = *xp;
+    *xp = *yp;
+    *yp = temp;
+}
+
+// A function to implement bubble sort
+void bubbleSort(auto& Data, char key)
+{
+    int i, j;
+    for (i = 0; i < key-1; i++)
+        // Last i elements are already in place
+        for (j = 0; j < key-i-1; j++)
+            if (Data[j] > Data[j+1])
+                swap(&Data[j], &Data[j+1]);
+}
+
 int ofApp::BinarySearch(auto& Data, auto key) {
 
+    bubbleSort(Data, key);
 int low = 0, high = Data.size()-1;
 int mid;
 
@@ -57,19 +76,21 @@ void  ofApp::processAxiom()
  int where = -1; //store location in the "parallel" vectors fromChars and toStrings
 
     
+    deque<Queue>axioms;
+    axioms.push_back(axiom);
     
-    
- for(auto& ch : axiom)
+    for(auto ch = axioms.begin(); ch == axioms.end();)
      
   {
       
-      
+      //axioms.push_back(ch);
       where = BinarySearch(rules,ch);//look for ch in fromChars vector
      
      if (where == -1)
      {
+     
          
-       str += axiom.front(); //ch was not found so its value is not changed in new string    
+       str += axiom.front(); //ch was not found so its value is not changed in new string
      }
     else // ch was found in fromChars vector
      {
@@ -78,8 +99,9 @@ void  ofApp::processAxiom()
      }
   }//end for 
 
-
-    axiom = str;//update axiom to the new state (after all replacements made)
+    
+    axiom.enqueue(str);
+    
 }
 
 //--------------------------------------------------------------
@@ -102,10 +124,12 @@ void ofApp::draw(){
 
 ofBackground(0);
 ofTranslate(xpos,ypos);
+    
+    deque<Queue>axiom;
 
 for (auto ch: axiom)//for each character in the axiom string 
 {
-    switch(ch)
+    switch(ch.front())
     {
 
         case 'H':

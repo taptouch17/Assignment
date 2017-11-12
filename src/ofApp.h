@@ -40,7 +40,7 @@ class ofApp : public ofBaseApp{
 
 		// private "helper" methods
 		//int linearSearch(auto& Data, auto key);
-        int BinarySearch(autoData, auto key);
+        int BinarySearch(auto Data, auto key);
 		void processAxiom( ); 
                 void getData();
 
