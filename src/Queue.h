@@ -28,7 +28,7 @@ public:
     
     int size(); //tells you the number of items in the ADT
     
-    void enqueue(auto); //inserts item at the back of queue
+    void enqueue(auto k); //inserts item at the back of queue
     
     void dequeue(); //removes an item from the front of the queue
     

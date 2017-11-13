@@ -28,7 +28,7 @@ void swap(int *xp, int *yp)
 }
 
 // A function to implement bubble sort
-void bubbleSort(auto& Data, char key)
+void bubbleSort(auto& Data, auto key)
 {
     int i, j;
     for (i = 0; i < key-1; i++)
@@ -40,7 +40,7 @@ void bubbleSort(auto& Data, char key)
 
 int ofApp::BinarySearch(auto& Data, auto key) {
 
-    bubbleSort(Data, key);
+    
 int low = 0, high = Data.size()-1;
 int mid;
 
@@ -52,7 +52,7 @@ while (low <= high)
             
             return mid;
         }
-            if ((key < Data[mid].getOfChar()) && (key > Data[mid].getOfChar())) 
+            if (key < Data[mid].getOfChar()) 
         {
             
             high = mid - 1;
@@ -72,6 +72,7 @@ while (low <= high)
 
 void  ofApp::processAxiom()
 {
+
  string str = "";//temporary string to hold "working" copy of axiom
  int where = -1; //store location in the "parallel" vectors fromChars and toStrings
 
@@ -84,7 +85,7 @@ void  ofApp::processAxiom()
   {
       
       //axioms.push_back(ch);
-      where = BinarySearch(rules,ch);//look for ch in fromChars vector
+      where = BinarySearch(rules,axiom.front());//look for ch in fromChars vector
      
      if (where == -1)
      {
@@ -232,7 +233,7 @@ void ofApp::getData()
     if(in)//file opened correctly
      {
        in>>length>>change_len>>angle;//no error checking (hope for the best)
-       in>>axiom.enqueue(in);
+       //in>>axiom.front();
        in>>R; 
        
       for(auto i = 0u; i < R; i++)
