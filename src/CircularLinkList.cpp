@@ -2,7 +2,7 @@
 //  Queue.cpp
 //  Assignment
 //
-//  Created by Graeme Stoute on 11/11/2017.
+//  Created by Jelani on 11/11/2017.
 //
 
 #include "CircularLinkList.h"

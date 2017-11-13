@@ -29,7 +29,7 @@ public:
     
     char front(); //tells us the element at the front of the queue without removing it
     
-    char back(); // tesll us the element at the back of the queue without removing it
+    char back(); // tells us the element at the back of the queue without removing it
     
     void clear(); //makes the ADT empty
     
