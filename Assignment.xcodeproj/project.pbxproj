@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6545DD8C1FBA1C9A003F91B9 /* Queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6545DD891FBA1C98003F91B9 /* Queue.cpp */; };
+		6545DD8D1FBA1C9A003F91B9 /* CircularLinkList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6545DD8A1FBA1C99003F91B9 /* CircularLinkList.cpp */; };
 		C66E84E61FB7DAFE000E0362 /* Rule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C66E84E41FB7DAFE000E0362 /* Rule.cpp */; };
-		C66E84FC1FB7E88B000E0362 /* Queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C66E84FA1FB7E88B000E0362 /* Queue.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
@@ -44,6 +45,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6545DD881FBA1C98003F91B9 /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Queue.h; path = /Users/jelani/Documents/Tutorials/AssignmentP1/src/Queue.h; sourceTree = "<absolute>"; };
+		6545DD891FBA1C98003F91B9 /* Queue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Queue.cpp; path = /Users/jelani/Documents/Tutorials/AssignmentP1/src/Queue.cpp; sourceTree = "<absolute>"; };
+		6545DD8A1FBA1C99003F91B9 /* CircularLinkList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CircularLinkList.cpp; path = /Users/jelani/Documents/Tutorials/AssignmentP1/src/CircularLinkList.cpp; sourceTree = "<absolute>"; };
+		6545DD8B1FBA1C9A003F91B9 /* CircularLinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CircularLinkList.h; path = /Users/jelani/Documents/Tutorials/AssignmentP1/src/CircularLinkList.h; sourceTree = "<absolute>"; };
 		C66E84E41FB7DAFE000E0362 /* Rule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rule.cpp; sourceTree = "<group>"; };
 		C66E84E51FB7DAFE000E0362 /* Rule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rule.h; sourceTree = "<group>"; };
 		C66E84F11FB7E211000E0362 /* input2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input2; sourceTree = "<group>"; };
@@ -51,8 +56,6 @@
 		C66E84F31FB7E211000E0362 /* plant */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plant; sourceTree = "<group>"; };
 		C66E84F41FB7E211000E0362 /* input */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input; sourceTree = "<group>"; };
 		C66E84F51FB7E211000E0362 /* triangle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = triangle; sourceTree = "<group>"; };
-		C66E84FA1FB7E88B000E0362 /* Queue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Queue.cpp; sourceTree = "<group>"; };
-		C66E84FB1FB7E88B000E0362 /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E4B69B5B0A3A1756003C02F2 /* AssignmentDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
@@ -119,10 +122,12 @@
 			isa = PBXGroup;
 			children = (
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
-				C66E84FA1FB7E88B000E0362 /* Queue.cpp */,
-				C66E84FB1FB7E88B000E0362 /* Queue.h */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
+				6545DD8A1FBA1C99003F91B9 /* CircularLinkList.cpp */,
+				6545DD8B1FBA1C9A003F91B9 /* CircularLinkList.h */,
+				6545DD891FBA1C98003F91B9 /* Queue.cpp */,
+				6545DD881FBA1C98003F91B9 /* Queue.h */,
 				C66E84E41FB7DAFE000E0362 /* Rule.cpp */,
 				C66E84E51FB7DAFE000E0362 /* Rule.h */,
 			);
@@ -228,7 +233,8 @@
 				C66E84E61FB7DAFE000E0362 /* Rule.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
-				C66E84FC1FB7E88B000E0362 /* Queue.cpp in Sources */,
+				6545DD8C1FBA1C9A003F91B9 /* Queue.cpp in Sources */,
+				6545DD8D1FBA1C9A003F91B9 /* CircularLinkList.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,47 +1,40 @@
 //
 //  Queue.hpp
-//  Assignment
+//  Queue
 //
-//  Created by Graeme Stoute on 11/11/2017.
+//  Created by Jelani on 13/11/2017.
+//  Copyright © 2017 Tap. TOUCH. All rights reserved.
 //
 
-#ifndef Queue_hpp
-#define Queue_hpp
+#ifndef Queue_h
+#define Queue_h
 
 #include <stdio.h>
+#include "CircularLinkList.h"
 
-using namespace std;
 
-class Queue
-{
+class Queue {
 private:
-    
-    class Node;
-    
-    Node* frontPtr = nullptr;
-    Node* rearPtr;
-    int num_elements = 0;
+    CircularList List;
     
 public:
-    
-    ~Queue(); //d'tor
-    
+    //~Queue();
     int size(); //tells you the number of items in the ADT
     
-    void enqueue(auto k); //inserts item at the back of queue
+    void enqueue(char k); //inserts item at the back of queue
     
-    void dequeue(); //removes an item from the front of the queue
+    void dequeue(char value); //removes an item from the front of the queue
     
     bool isEmpty(); //checks to see if ADT is empty
     
-    char front(); //tells us the element at the front of the list without removing it
+    char front(); //tells us the element at the front of the queue without removing it
+    
+    char back(); // tesll us the element at the back of the queue without removing it
     
     void clear(); //makes the ADT empty
     
-    char displayQueue(); // Displays items in queue
-    
+    int displayQueue(); // Displays items in queue
     
 };
-
 
 #endif /* Queue_hpp */

@@ -28,7 +28,7 @@ class ofApp : public ofBaseApp{
 	private: 
 
 		//text stuff
-		Queue axiom; //starting string
+		string axiom = ""; //starting string
         vector<Rule> rules;
 		unsigned R = 0;
 		unsigned N = 0;

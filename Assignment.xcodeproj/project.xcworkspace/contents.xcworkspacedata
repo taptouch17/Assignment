@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/jelani/Documents/Tutorials/AssignmentP1/src/CircularLinkList.cpp">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/jelani/Documents/Tutorials/AssignmentP1/src/CircularLinkList.h">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/jelani/Documents/Tutorials/AssignmentP1/src/Queue.cpp">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/jelani/Documents/Tutorials/AssignmentP1/src/Queue.h">
+   </FileRef>
+   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>

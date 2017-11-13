@@ -1,141 +1,71 @@
 //
 //  Queue.cpp
-//  Assignment
+//  Queue
 //
-//  Created by Graeme Stoute on 11/11/2017.
+//  Created by Jelani on 13/11/2017.
+//  Copyright © 2017 Tap. TOUCH. All rights reserved.
 //
 
 #include "Queue.h"
+#include "CircularLinkList.h"
+
+#include <stdio.h>
 #include <iostream>
-#include <stdexcept>//used to be able to "throw" exceptions
-#include <string>
 
 using namespace std;
 
-class Queue::Node //self-referential Node class
-{
-public:
-    char data = ' ';
-    Node* link = nullptr;
-    //link is a data member which is a pointer
-    //to an object of the same type (i.e. Node)
+int Queue::size() {
     
-};//end Node class definition (can only be seen by the List class)
-
-Queue::~Queue(){
+    cout << "The size of the Queeue is " << List.size() << endl;
     
-    while(num_elements > 0)
-        dequeue();
-    
-}
-
-int Queue::size()
-{
-    return num_elements;
-}
-
-void Queue::enqueue(auto k)
-{
-    
-    Node* newPtr = new Node;
-    Node* tmpPtr = frontPtr;
-    tmpPtr->data = k;
-    
-    if (frontPtr == NULL) {
-        frontPtr = tmpPtr;
-    }
-    else {
-        rearPtr->link = tmpPtr;
-    }
-    rearPtr = tmpPtr;
-    rearPtr->link = frontPtr;
-    
-    
-    
+    return List.size();
     
     
 }
 
-void Queue::dequeue()
-{
+void Queue::enqueue(char theValue) {
     
-    Node*newPtr = frontPtr;
-    if(num_elements == 0 || frontPtr == NULL){
-        
-        throw out_of_range("Queue::dequeue() Empty Queue");
-        
+    if (List.size() == 0) {
+        List.createANode(theValue);
+        return;
     }
-    char c;
-    if (frontPtr == rearPtr) {
-        c = frontPtr->data;
-        free(frontPtr);
-        frontPtr = NULL;
-        rearPtr = NULL;
-        frontPtr = rearPtr = nullptr;
-    }
-    else {
-        Node*tmp = frontPtr;
-        c = tmp->data;
-        frontPtr = frontPtr->link;
-        rearPtr->link = frontPtr;
-        free(tmp);
-        
-    }
+    List.addAtBack(theValue, List.size());
+}
+
+void Queue::dequeue(char value) {
+    List.deleteElement(value);
     
+}
+
+int Queue::displayQueue() {
+    cout << "The Queue is " << endl;
+    return List.displayList();
+}
+
+bool Queue::isEmpty() {
+    if (size() != 0) {
+        return false;
+    }
+    return true;
+}
+
+char Queue::front() {
+    return List.atFront();
+}
+
+char Queue::back() {
+    return List.atBack();
+}
+void Queue::clear() {
+    while (List.size() > 0) {
+        List.deleteEnd();
+    }
 }
 
 
 
-void Queue::clear()
-{
-    
-    while(size() != 0)
-    {
-        dequeue();
-    }
-    
-}
-
-char Queue::front()
-{
-    if(num_elements == 0){
-        
-        throw out_of_range("Queue::front() Empty Queue");
-        
-    }
-    
-    Node* printPtr = nullptr;
-    
-    printPtr = frontPtr;
-    return printPtr->data;
-    
-}
-
-char Queue::displayQueue() {
-    Node*tmp = frontPtr;
-    cout << "\n Elements in this queue are: ";
-    
-    while (tmp -> link != frontPtr) {
-        cout << tmp->data << endl;
-        tmp = tmp -> link;
-        return tmp->data;
-    }
-    cout << tmp->data;
-    return tmp->data;
-}
 
 
-bool Queue::isEmpty()
-{
-    
-    bool empty = false;
-    
-    if(num_elements == 0){
-        
-        empty = true;
-        
-    }
-    
-    return empty;
-    
-}
+
+
+
